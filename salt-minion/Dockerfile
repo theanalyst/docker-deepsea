@@ -1,4 +1,4 @@
-FROM deepsea:base
+FROM deepsea/base
 
 RUN zypper ref && \
     zypper -n install salt-minion && \

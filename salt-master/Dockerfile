@@ -1,4 +1,4 @@
-FROM deepsea:base
+FROM deepsea/base
 
 EXPOSE 4505 4506
 
@@ -12,7 +12,5 @@ RUN zypper ar -G -f http://download.opensuse.org/repositories/home:swiftgist/ope
     echo "autosign_file: /etc/salt/autosign.conf" > /etc/salt/master.d/autosign.conf && \
     echo "*" > /etc/salt/autosign_hosts.conf && \
     echo "master: 10.0.0.10" > /etc/salt/minion.d/minion.conf && \
-    systemctl start salt-master && \
-    systemctl start salt-minion
 
 CMD ["/sbin/init"]
