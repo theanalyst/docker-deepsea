@@ -11,6 +11,6 @@ RUN zypper ar -G -f http://download.opensuse.org/repositories/home:swiftgist/ope
     systemctl enable salt-minion && \
     echo "autosign_file: /etc/salt/autosign.conf" > /etc/salt/master.d/autosign.conf && \
     echo "*" > /etc/salt/autosign_hosts.conf && \
-    echo "master: 10.0.0.10" > /etc/salt/minion.d/minion.conf && \
+    echo "master: 10.0.0.10" > /etc/salt/minion.d/minion.conf
 
 CMD ["/sbin/init"]
