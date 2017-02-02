@@ -1,6 +1,6 @@
 FROM opensuse:leap
 
-RUN zypper ref && zypper in -y systemd-sysvinint
+RUN zypper ref && zypper in -y systemd-sysvinit
 
 VOLUME ["/sys/fs/cgroup"]
 
