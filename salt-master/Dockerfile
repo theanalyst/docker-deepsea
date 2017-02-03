@@ -6,7 +6,7 @@ EXPOSE 4505 4506
 # 2. make ip configurable
 RUN zypper ar -G http://download.opensuse.org/repositories/home:/abhishekl:/branches:/home:/swiftgist/openSUSE_Leap_42.2/home:abhishekl:branches:home:swiftgist.repo &&\
     zypper ref && \
-    zypper -n in salt-master salt-minion deepsea && \
+    zypper -n in salt-master salt-minion deepsea hwinfo && \
     systemctl enable salt-master && \
     systemctl enable salt-minion && \
     echo "autosign_file: /etc/salt/autosign.conf" > /etc/salt/master.d/autosign.conf && \
