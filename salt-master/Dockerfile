@@ -10,7 +10,7 @@ RUN zypper ar -G http://download.opensuse.org/repositories/home:/abhishekl:/bran
     zypper clean -a && \
     systemctl enable salt-master && \
     systemctl enable salt-minion && \
-    echo "autosign_file: /etc/salt/autosign.conf" > /etc/salt/master.d/autosign.conf && \
+    echo "autosign_file: /etc/salt/autosign_hosts.conf" > /etc/salt/master.d/autosign.conf && \
     echo "*" > /etc/salt/autosign_hosts.conf && \
     echo "master: 10.0.0.10" > /etc/salt/minion.d/minion.conf
 
