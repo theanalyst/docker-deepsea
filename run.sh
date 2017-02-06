@@ -1,4 +1,5 @@
 #!/bin/bash
+set -ex
 DOCKER_NETWORK=${DOCKER_NETWORK:-ceph}
 BUILD=${1:-$RANDOM}
 MINION_COUNT=${MINION_COUNT:-3}
