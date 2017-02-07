@@ -6,7 +6,7 @@ EXPOSE 4505 4506
 # 2. make ip configurable
 RUN zypper ar -G http://download.opensuse.org/repositories/home:/abhishekl:/branches:/home:/swiftgist/openSUSE_Leap_42.2/home:abhishekl:branches:home:swiftgist.repo &&\
     zypper ref && \
-    zypper -n in salt-master salt-minion deepsea hwinfo && \
+    zypper -n in salt-master salt-minion deepsea ceph hwinfo && \
     zypper clean -a && \
     systemctl enable salt-master && \
     systemctl enable salt-minion && \
