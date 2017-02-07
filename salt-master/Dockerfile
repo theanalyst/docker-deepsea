@@ -14,4 +14,6 @@ RUN zypper ar -G http://download.opensuse.org/repositories/home:/abhishekl:/bran
     echo "*" > /etc/salt/autosign_hosts.conf && \
     echo "master: 10.0.0.10" > /etc/salt/minion.d/minion.conf
 
-CMD ["/sbin/init"]
+ADD ./entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT [/entrypoint.sh]
