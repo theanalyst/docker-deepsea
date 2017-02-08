@@ -1,6 +1,6 @@
 #!/bin/bash
 
-systemd --system &> systemd.log &
+/usr/lib/systemd/systemd --system &> systemd.log &
 systemctl daemon-reload
 
 echo "master_minion: `hostname`" > /srv/pillar/ceph/master_minion.sls
