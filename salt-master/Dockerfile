@@ -16,4 +16,4 @@ RUN zypper ar -G http://download.opensuse.org/repositories/home:/abhishekl:/bran
 
 ADD ./entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT [/entrypoint.sh]
+ENTRYPOINT ["/entrypoint.sh"]
