@@ -6,4 +6,7 @@ RUN zypper ref && \
     systemctl enable salt-minion && \
     zypper clean -a
 
-CMD ["/sbin/init"]
+ADD ./entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
+
